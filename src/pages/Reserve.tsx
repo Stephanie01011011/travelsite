@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Topnav from '../components/Topnav'
 import { Container, TextField, Select, MenuItem, InputLabel, Button, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 
 function Reserve() {
@@ -23,13 +24,17 @@ function Reserve() {
      <form noValidate autoComplete='off' className='bookForm'>
       <div className="formFields">
       <TextField label='Full Name' variant='outlined' sx={{
+        marginBottom: '30px',
+        width: '300px'
         
       }} required></TextField><br/>
       <TextField label='Email' variant='outlined' sx={{
-       
+       marginBottom: '30px',
+       width: '300px'
       }} required></TextField><br/>
       <TextField label='Phone Number' variant='outlined' sx={{
-       
+       marginBottom: '30px',
+       width: '300px'
       }} required></TextField>
       
       <InputLabel id="demo-simple-select-label">Location?</InputLabel>
@@ -39,7 +44,9 @@ function Reserve() {
     value={location}
     label="Age"
     sx={{
-      width: '160px'
+      width: '160px',
+      marginBottom: '30px'
+
     }}
     onChange={handleChange}
   >
@@ -55,15 +62,18 @@ function Reserve() {
   </Select>
 
   <InputLabel id="visitors">How many visitors?</InputLabel>
-  <input style={{height: '40px', width: '60px', fontSize: '24px'}} type="number" id="quantity" name="quantity" min="1" max="8"></input>
+  <input style={{height: '40px', width: '60px', fontSize: '24px', marginBottom: '30px'}} type="number" id="quantity" name="quantity" min="1" max="8"></input>
   
   <div className="date" style={{display: 'flex'}}>
   <InputLabel id="startdate">Start Date</InputLabel>
-  <input type="date" name="Start Date" id="start" />
+  <input type="date" name="Start Date" id="start" style={{marginBottom: '30px'}} />
   <InputLabel id="enddate">End Date</InputLabel>
-  <input type="date" name="End Date" id="end" />
+  <input type="date" name="End Date" id="end" style={{marginBottom: '30px'}}/>
   </div>
-  <Button variant='contained' color='secondary'>Reserve</Button>
+  <Button variant='contained' color='secondary' sx={{
+    marginRight: '20px'
+  }}>Reserve</Button>
+  <Link to='/'><Button variant='outlined' color='secondary'>Cancel</Button></Link>
   </div>
   <div className="formimg"></div>
      </form>

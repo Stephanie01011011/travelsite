@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext, useContext, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -14,6 +14,9 @@ import Reserve from './pages/Reserve';
 import About from './pages/About';
 import Listings from './pages/Listings';
 
+import ListingAbout from './pages/ListingAbout';
+import ListingObj from './ListingObj';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -21,24 +24,37 @@ const theme = createTheme({
     },
     secondary: {
       main: '#ef233c'
+    },
+    info: {
+      main: '#2b2d42'
     }
   }
 })
 
 
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+
+
 root.render(
   <ThemeProvider theme={theme}>
   <BrowserRouter>
   <Topnav/>
+  
   <Routes>
+ 
     <Route path="/" element={<App />}/>
     <Route path='/book' element={<Reserve />} />
     <Route path='/about' element={<About />} />
-    <Route path='/listings' element={<Listings />} />     
+    <Route path='/listings' element={<Listings />} />
+    <Route path='/listabout' element={<ListingAbout />} />  
+ 
   </Routes>
+  
   <Footer />
   </BrowserRouter>
   </ThemeProvider>

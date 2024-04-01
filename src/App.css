@@ -55,7 +55,7 @@ body{
 .bookForm{
   width: 90%;
   background-color: white;
-  min-height: 400px;
+  min-height: fit-content;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -77,3 +77,22 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.aboutHead{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: left;
+  background-color: white;
+  padding: 50px;
+  
+}
+.aboutImg{
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 6px 8px 10px 0;
+
+}
+.abouttxt{
+  width: 55%;
+}
+

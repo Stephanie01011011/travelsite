@@ -1,5 +1,6 @@
 import { Button, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 interface Props {
   id: number,
@@ -10,6 +11,7 @@ interface Props {
 
 
 function Destcard(props: Props) {
+  const listindex:number = props.id;
   return (
     <div>
       
@@ -28,9 +30,9 @@ function Destcard(props: Props) {
           <Typography variant='body1' sx={{
             marginBottom: '40px'
           }}>{props.description}</Typography>
-          <Button variant='contained' color='secondary' sx={{
+          <Link to={{ pathname: '/listabout'}}><Button variant='contained' color='secondary' sx={{
             width: '95%'
-          }}>View More</Button>
+          }}>View More</Button></Link>
         </CardContent>
       </Card>
       
