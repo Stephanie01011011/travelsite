@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Typography } from '@mui/material'
+import { Button, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 
 interface Props {
@@ -13,13 +13,24 @@ function Destcard(props: Props) {
   return (
     <div>
       
-      <Card sx={{
-        width: '300px'
+      <Card raised={true} sx={{
+        
       }}>
-        <CardHeader/>
+        
+        <CardMedia
+        component="img"
+        height="194"
+        image={props.url}
+        alt="Bermuda image"
+      />
         <CardContent>
-          <Typography variant='body1'>{props.title}</Typography>
-          <Typography variant='body2'>{props.description}</Typography>
+          <Typography variant='h4'>{props.title}</Typography>
+          <Typography variant='body1' sx={{
+            marginBottom: '40px'
+          }}>{props.description}</Typography>
+          <Button variant='contained' color='secondary' sx={{
+            width: '95%'
+          }}>View More</Button>
         </CardContent>
       </Card>
       

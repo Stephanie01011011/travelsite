@@ -39,9 +39,41 @@ body{
 }
 .stat{
   width: 20%;
+  background-color: white;
+  height: 180px;
+  border-radius: 12px;
 }
 .destinations{
   width: 100%;
-  height: 500px;
+  padding-bottom: 100px;
   background-color: #edf2f4;
+}
+.footer{
+  height: 100px;
+  align-items: center;
+}
+.bookForm{
+  width: 90%;
+  background-color: white;
+  min-height: 400px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.formimg{
+  background-image: url(../src/undraw_working_from_anywhere_re_9obt.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 60%;
+  height: 450px;
+  
+}
+.bookInfo{
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

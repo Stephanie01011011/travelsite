@@ -10,7 +10,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Topnav from './components/Topnav';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { Book } from '@mui/icons-material';
+import Reserve from './pages/Reserve';
 import About from './pages/About';
 import Listings from './pages/Listings';
 
@@ -34,8 +34,8 @@ root.render(
   <BrowserRouter>
   <Topnav/>
   <Routes>
-    <Route path="/" element={<App/>}/>
-    <Route path='/book' element={<Book />} />
+    <Route path="/" element={<App />}/>
+    <Route path='/book' element={<Reserve />} />
     <Route path='/about' element={<About />} />
     <Route path='/listings' element={<Listings />} />     
   </Routes>

@@ -4,9 +4,11 @@ import Info from './components/Info';
 import { Link } from 'react-router-dom';
 import Destinations from './components/Destinations';
 
+
 function App() {
   return (
     <div className="App">
+      
       <div className="spacing" style={{height: '100px'}}></div>
       
         <Container sx={{
@@ -25,6 +27,8 @@ function App() {
         </Container>
           <Info />
           <Destinations />
+
+          
     </div>
   );
 }
