@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Topnav from '../components/Topnav'
 import { Container, TextField, Select, MenuItem, InputLabel, Button, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
 
 
 function Reserve() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
   const [location, setLocation] = useState(1);
   const handleChange = (e:any) => {
       setLocation(e.target.value);
@@ -70,9 +73,9 @@ function Reserve() {
   <InputLabel id="enddate">End Date</InputLabel>
   <input type="date" name="End Date" id="end" style={{marginBottom: '30px'}}/>
   </div>
-  <Button variant='contained' color='secondary' sx={{
+  <Link to='/booked'><Button variant='contained' color='secondary' sx={{
     marginRight: '20px'
-  }}>Reserve</Button>
+  }}>Reserve</Button></Link>
   <Link to='/'><Button variant='outlined' color='secondary'>Cancel</Button></Link>
   </div>
   <div className="formimg"></div>

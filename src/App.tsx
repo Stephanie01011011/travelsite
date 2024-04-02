@@ -3,9 +3,17 @@ import { Button, Container, Typography } from '@mui/material';
 import Info from './components/Info';
 import { Link } from 'react-router-dom';
 import Destinations from './components/Destinations';
+import { useEffect, useState } from 'react';
+
 
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
+
+  
+  
   return (
     <div className="App">
       

@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Topnav from '../components/Topnav'
-import { Container, Typography } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
   return (
     <div>
        <div className="spacing" style={{height: '200px'}}></div>
       <Container sx={{
-        textAlign: 'center'
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }}>
         <Typography variant='h1' color='primary'>Voyage Takes Care Of You</Typography>
-        <Typography variant='body1' color='primary'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla pariatur dicta sunt corporis, illum nesciunt quaerat velit voluptate. Eos, qui. Cumque exercitationem amet quam temporibus similique, saepe beatae optio quas.</Typography>
+        <Typography variant='body1' color='primary' sx={{
+          width: '60%'
+        }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla pariatur dicta sunt corporis, illum nesciunt quaerat velit voluptate. Eos, qui. Cumque exercitationem amet quam temporibus similique, saepe beatae optio quas.</Typography>
+        <Button variant='contained' color='secondary' href='#contact' sx={{
+          marginTop: '30px'
+        }}>See Contact Info</Button>
       </Container>
       <div className="aboutStats">
         <div className="area">
@@ -65,12 +76,23 @@ function About() {
           <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3VzdG9tZXIlMjBzZXJ2aWNlfGVufDB8fDB8fHww" alt="" className='displayImg'/>
         </div>
       </div>
-      <div className="contact">
+      <div className="contact" id='contact'>
         <Container sx={{
-          textAlign: 'center'
+          textAlign: 'center',
+          marginTop: '60px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
         }}>
         <Typography variant='h1' color='primary'>Contact Us</Typography>
-        <Typography variant='body1' color='primary'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla pariatur dicta sunt corporis, illum nesciunt quaerat velit voluptate. Eos, qui. Cumque exercitationem amet quam temporibus similique, saepe beatae optio quas.</Typography>
+        <Typography variant='body1' color='primary' sx={{
+          width: '60%'
+        }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla pariatur dicta sunt corporis, illum nesciunt quaerat velit voluptate. Eos, qui. Cumque exercitationem amet quam temporibus similique, saepe beatae optio quas.</Typography>
+
+        <div className="contactinfo">
+          <Typography variant='body2' color='secondary'>999-234-9824</Typography>
+          <Typography variant='body2' color='secondary'>voyagetravel@gmail.com</Typography>
+        </div>
         </Container>
       </div>
     </div>

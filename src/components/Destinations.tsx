@@ -3,10 +3,10 @@ import React from 'react'
 import Destcard from './Destcard'
 import { useState } from 'react'
 import ListingObj from '../ListingObj'
-
+import { popdests } from '../ListingObj';
 
 function Destinations() {
-    let dests = ListingObj();
+    let dests = popdests;
     const [locs, setLocs] = useState(dests);
   return (
     <div>

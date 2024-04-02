@@ -1,10 +1,18 @@
 import { Button, Container, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import ListingObj from '../ListingObj';
+import { Link } from 'react-router-dom';
+
 
 
 
 function ListingAbout() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
+   
+  
+    
     const dests = ListingObj();
     const [location, setLocation] = useState(dests[0]);
   return (
@@ -20,7 +28,9 @@ function ListingAbout() {
         <div className="abouttxt">
         <Typography variant='h4' color='info'>{location.about}</Typography>
         <Typography variant='body1' color='info'>{location.description}</Typography>
-        <Button variant='contained' color='secondary'>Book Now</Button>
+        <Link to='/book'><Button variant='contained' color='secondary' sx={{
+          marginTop: '30px'
+        }}>Book Now</Button></Link>
         </div>
         <img src={location.url} alt="" className='aboutImg'/>
         </div>

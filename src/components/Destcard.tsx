@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
+
 
 interface Props {
   id: number,
@@ -11,13 +12,14 @@ interface Props {
 
 
 function Destcard(props: Props) {
-  const listindex:number = props.id;
+
+
+ 
+  
   return (
     <div>
       
-      <Card raised={true} sx={{
-        
-      }}>
+      <Card raised={true}>
         
         <CardMedia
         component="img"

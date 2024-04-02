@@ -13,9 +13,9 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import Reserve from './pages/Reserve';
 import About from './pages/About';
 import Listings from './pages/Listings';
-
 import ListingAbout from './pages/ListingAbout';
-import ListingObj from './ListingObj';
+import Bookingsuccess from './pages/Bookingsuccess';
+
 
 const theme = createTheme({
   palette: {
@@ -40,7 +40,9 @@ const root = ReactDOM.createRoot(
 
 
 
+
 root.render(
+ 
   <ThemeProvider theme={theme}>
   <BrowserRouter>
   <Topnav/>
@@ -51,10 +53,11 @@ root.render(
     <Route path='/book' element={<Reserve />} />
     <Route path='/about' element={<About />} />
     <Route path='/listings' element={<Listings />} />
-    <Route path='/listabout' element={<ListingAbout />} />  
- 
+    <Route path='/listabout' element={<ListingAbout/>} />
+    <Route path='/booked' element={<Bookingsuccess />} />  
+    
   </Routes>
-  
+ 
   <Footer />
   </BrowserRouter>
   </ThemeProvider>
