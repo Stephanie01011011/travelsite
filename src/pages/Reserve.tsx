@@ -76,7 +76,7 @@ function Reserve() {
   <Link to='/booked'><Button variant='contained' color='secondary' sx={{
     marginRight: '20px'
   }}>Reserve</Button></Link>
-  <Link to='/'><Button variant='outlined' color='secondary'>Cancel</Button></Link>
+  <Link to='/travelsite'><Button variant='outlined' color='secondary'>Cancel</Button></Link>
   </div>
   <div className="formimg"></div>
      </form>

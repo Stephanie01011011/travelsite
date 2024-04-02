@@ -18,7 +18,7 @@ function Bookingsuccess() {
             width: '60%'
         }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, commodi cumque sed laudantium nemo similique optio. Nobis perferendis non mollitia quam deleniti voluptatibus, maxime, reiciendis eius est unde nemo ea.</Typography>
         <div className="successBtns">
-        <Link to='/'><Button variant='contained' color='secondary'>Return Home</Button></Link>
+        <Link to='/travelsite'><Button variant='contained' color='secondary'>Return Home</Button></Link>
         <Link to='/about'><Button variant='outlined' color='secondary' sx={{
             marginLeft: '30px'
         }}>Contact Us</Button></Link>

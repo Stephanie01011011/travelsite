@@ -23,7 +23,7 @@ function Topnav() {
             }}>
                 <div className="logo">
                   <div className="logoimg"></div>
-               <Link to='/' style={{textDecoration: 'none'}}><Typography variant='h3' color='primary'>Voyager</Typography></Link>
+               <Link to='/travelsite' style={{textDecoration: 'none'}}><Typography variant='h3' color='primary'>Voyager</Typography></Link>
                 </div>
 
                 <div className="menu">
